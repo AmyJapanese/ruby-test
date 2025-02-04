@@ -54,4 +54,4 @@ end
 
 puts "県名を入力してください（県もつけてください）:"
 kenmei = gets.chomp
-puts "県庁所在地は #{kencho_shozai(kenmei)} です。"
+puts "県庁所在地は #{kencho_shozai(kenmei)} です。" # kencho_shozaiメソッドにkenmeiを渡して、結果を出力する
