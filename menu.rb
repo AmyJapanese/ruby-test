@@ -24,7 +24,7 @@ def open_selected_file(files)
     choice = choice.to_i
     if choice.between?(1, files.length)
       system("ruby #{files[choice - 1]}")
-      print "終了しますか？（y/n）: "
+      print "Quit?（y/n）: "
       exit_choice = gets.chomp.downcase
       return false if exit_choice == 'y'
     else
