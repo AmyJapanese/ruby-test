@@ -29,6 +29,11 @@ class EndlessRenda
     loop do
       char = STDIN.getch
       if char.downcase == 's'
+        puts "Starting in 3 seconds..."
+        3.downto(1) do |i|
+          puts i
+          sleep 1
+        end
         puts "Press 'A' key as fast as you can. If you press slower than the selected difficulty, it's game over!"
         break
       end
