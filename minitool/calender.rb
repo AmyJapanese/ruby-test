@@ -17,9 +17,19 @@ def display_calendar(year, month)
   print "\n"
 end
 
-puts "表示したい年を入力してください:"
-year = gets.to_i
-puts "表示したい月を入力してください:"
-month = gets.to_i
+def get_valid_input(prompt, min, max)
+  loop do
+    puts prompt
+    input = gets.chomp
+    if input.match?(/^\d+$/)
+      value = input.to_i
+      return value if value >= min && value <= max
+    end
+    puts "無効な入力です。もう一度入力してください。"
+  end
+end
+
+year = get_valid_input("表示したい年を入力してください:", 1, 9999)
+month = get_valid_input("表示したい月を入力してください:", 1, 12)
 
 display_calendar(year, month)
