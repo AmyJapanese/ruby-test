@@ -22,6 +22,12 @@ def start_game
     break if key.downcase == 's'
   end
 
+  puts "3秒後にゲームが始まります。"
+  3.downto(1) do |i|
+    puts i
+    sleep 1
+  end
+
   puts "ゲームスタート! Aキーを連打してください。"
   count = 0
   start_time = Time.now
